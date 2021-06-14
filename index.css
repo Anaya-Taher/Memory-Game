@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    height: 100vh;
+    background-color: #121212;
+}
+
+.player-info {
+    width: 800px;
+    height: 45px;
+    background-color: #FFF;
+    position: absolute;
+    margin: 20px 0;
+    left: calc(50% - (800px / 2));
+    padding: 0 10px;
+    border-bottom: 4px solid #D00;
+    border-radius: 5px;
+}
+
+.player-info div {
+    float: left;
+    font-size: 20px;
+    height: 100%;
+    line-height: 40px;
+    width: calc(100% / 3);
+    text-align: center;
+}
+
+.player-info div span {
+    color: #D00;
+}
+
+.parent {
+    width: 650px;
+    height: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 5px solid #03DAC5;
+    perspective: 1500px;
+    background-color: #696969;
+    position: absolute;
+    left: calc(50% - (650px / 2));
+    top: calc(50% - (550px / 2));
+    border-radius: 10px;
+}
+
+.box {
+    width: 120px;
+    height: 120px;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    cursor: pointer;
+    border-bottom: 4px solid #D00;
+    position: relative;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    font-size: 120px;
+    font-family: sans-serif;
+    color: #FFF;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-color: #000080;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.click {
+    transform: rotateY(-180deg);
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.prevent-clicked {
+    pointer-events: none;
+}
+
+.true {
+    pointer-events: none;
+    transform: rotateY(-180deg);
+}
+
+.made-by {
+
+    position: absolute;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #FFF;
+    top: 94%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.hidden {
+    display: none;
+}
+
+.blur {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 40%;
+}
+
+.help1 {
+    background-color: #000;
+
+}
+
+.help2 {
+    background-color: #FFF;
+}
